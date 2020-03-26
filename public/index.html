@@ -1,34 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat-App</title>
-</head>
-<body>
- <div>Hello from  Chat App</div> 
- <div id="messages"></div>
- <div id="location"></div>
- <form id="message-form">
-  <input name= "message" type="text" placeholder= "type message to send..">
-  <button >Submit</button>
- </form>
- <button id="send-location">send location</button>
-<script id="message-template" type="text/html">
-  <div>
-    <p>{{createdAt}} - {{message}}</p>
-  </div>
-</script>
-<script id="location-template" type="text/html">
-  <div>
-    <p><a href={{url}} target="_blank">My current location</a></p>
-  </div>
-</script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat-App</title>
+    <link rel="stylesheet" href="/css/styles.min.css" />
+  </head>
+  <body>
+    <div class="centered-form">
+      <div class="centered-form__box">
+        <h1>Join</h1>
+        <form action="/chat.html">
+          <label>Display name</label>
+          <input type="text" name="username" placeholder="Display name" required>
+          <label>Room</label>
+          <input type="text" name="room" placeholder="Room" required>
+          <button>Join</button>
+        </form>
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></srcipt>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
- <script src="/socket.io/socket.io.js"></script>
- <script src="/js/chat.js"></script>
-</body>
+      </div>
+    </div>
+  </body>
 </html>
